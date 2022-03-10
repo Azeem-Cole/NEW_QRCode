@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/QRCodeGenerators"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/azeem/Eclipse Project/QRCodes/QR_Generator_Libs/itextpdf-5.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/azeem/Eclipse Project/QRCodes/QR_Generator_Libs/pdfbox-app-3.0.0-alpha2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/azeem/Eclipse Project/QRCodes/QR_Generator_Libs/qrgen-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/azeem/Eclipse Project/QRCodes/QR_Generator_Libs/xmpbox-2.0.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/azeem/Eclipse Project/QRCodes/QR_Generator_Libs/zxing-core-1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/azeem/Eclipse Project/QRCodes/QR_Generator_Libs/zxing-j2se-1.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
