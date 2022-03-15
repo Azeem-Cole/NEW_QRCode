@@ -14,26 +14,24 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
 import com.google.zxing.WriterException;
 
-public class j_EngW4
+public class k_EngDeposit 
 {
 	
-	
-	public static PDDocument main(PDDocument W4) throws WriterException, IOException {
+	public static PDDocument main(PDDocument Deposit) throws WriterException, IOException {
 
-	    System.out.println("W4, Pages = "  + W4.getNumberOfPages() ); 
 
-	    String Data = "UniqueW4ID, Pages - ";
+
+	    System.out.println("Deposit, Pages = "  + Deposit.getNumberOfPages() ); 
+
+	    String Data = "UniqueDepositID Page - ";
 	    
-	    int[][] numbers = { {1, 500, 50},
-	    	             	{2, 500, 0},
-	    	             	{3, 490, 745},
-	    	             	{4, 490, 745}
+	    int[][] numbers = { {1, 550, 740}
 	    					};
 
 	    
 	    int count = 0;
 	    
-	    for(PDPage x: W4.getPages()) {
+	    for(PDPage x: Deposit.getPages()) {
 	    	
 			BufferedImage img = QRCode.a_QRCodeGenerator.main(Data + numbers[count][0]);
 
@@ -41,8 +39,8 @@ public class j_EngW4
             ImageIO.write(img, "png", f);
 
             
-	    	PDImageXObject Compile = PDImageXObject.createFromFile("MyFile.png" , W4);
-	    	PDPageContentStream content = new PDPageContentStream(W4, x, AppendMode.APPEND, true, true);
+	    	PDImageXObject Compile = PDImageXObject.createFromFile("MyFile.png" , Deposit);
+	    	PDPageContentStream content = new PDPageContentStream(Deposit, x, AppendMode.APPEND, true, true);
 	    		    	
 	    	content.drawImage(Compile, numbers[count][1], numbers[count][2], 50, 50);
 	    	
@@ -50,9 +48,10 @@ public class j_EngW4
 		    content.close();
 	    	count++;	
 	    }
-		
 
-	    System.out.println("W4 completed!!" ); 
-	    return W4;  
+	    System.out.println( "Deposit Completed!!" ); 
+
+	    return Deposit;  
 	}
+
 }
