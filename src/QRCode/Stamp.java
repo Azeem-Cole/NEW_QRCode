@@ -28,9 +28,9 @@ public class Stamp {
 
 	PDDocument Stamper(PDDocument doc) throws WriterException, IOException {
 
-	    System.out.println( "Pages = "  + doc.getNumberOfPages() ); 
+	    //System.out.println( "Pages = "  + doc.getNumberOfPages() ); 
 
-	    GenerateQRCode gen = new GenerateQRCode();
+	    QRCodeGenerator gen = new QRCodeGenerator();
 	    int count = 0;
 	    
 	    for(PDPage page: doc.getPages()) {
@@ -50,7 +50,10 @@ public class Stamp {
 	    	count++;	
 	    }
 
-	    System.out.println("completed!!" ); 
+	    if(doc.getNumberOfPages() != 0) {
+		    System.out.println("completed!!" ); 
+
+	    }
 	    return doc;  
 	}
 	
